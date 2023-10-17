@@ -17,7 +17,7 @@ public class Ej7_UtilidadesFicheros {
 	    bufferedReader = new BufferedReader(lector);
 
 	    return bufferedReader;
-		//Hola
+
 	} 
 	
 	public static PrintWriter getPrintWriter(String nombreFichero) throws IOException {
