@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.Normalizer;
 
 
 public class Ej8_ProcesadorFichero {
@@ -19,28 +20,31 @@ public class Ej8_ProcesadorFichero {
 	        pw = Ej7_UtilidadesFicheros.getPrintWriter(fichSalida);
 	        String lineaLeida;
 	        lineaLeida = br.readLine();
-	        int totalVocales = 0; 
+	        int totalVocal = 0;
 	        //Mientras no queden líneas....
-	        while (lineaLeida != null) {
-	            //...recorremos la linea...
-	            for (int i = 0; i < lineaLeida.length(); i++) {
-	                char letraLeida = Character.toLowerCase(lineaLeida.charAt(i));
-	                char letraPasada = Character.toLowerCase(letra.charAt(0));
-	                // incrementamos el contador
-	                if (letraLeida == letraPasada) {
-	                    totalVocales++;
-	                }
-	            }
-	            // Pasamos a la siguiente linea
-	            lineaLeida = br.readLine();
-	        }
+		while (lineaLeida != null) {
+			String lineaNormalizada = Normalizer.normalize(lineaLeida, Normalizer.Form.NFD);
+			lineaNormalizada = lineaNormalizada.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
+			//...recorremos la linea...
+			for (int i = 0; i < lineaNormalizada.length(); i++) {
+				char letraLeida = Character.toLowerCase(lineaNormalizada.charAt(i));
+				char letraPasada = Character.toLowerCase(letra.charAt(0));
+				// incrementamos el contador
+				if (letraLeida == letraPasada) {
+					totalVocal++;
+				}
+			}
+			// Pasamos a la siguiente linea
+			lineaLeida = br.readLine();
+		}
 	        //Escribimos el total de vocales
 	        //en el fichero de salida
-	        pw.println(totalVocales);
+	        pw.println(totalVocal);
 	        pw.flush();
 	        //Y cerramos los ficheros
 	        pw.close();
 	        br.close();
+		System.out.println(totalVocal);
 	    }
 	/**
 	* Dado un fichero pasado como argumento, contará cuantas
