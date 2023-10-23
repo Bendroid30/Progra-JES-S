@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/U1/Hilos_Jesus/Hilos_Jesus.iml" filepath="$PROJECT_DIR$/U1/Hilos_Jesus/Hilos_Jesus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PROGRA SERVER - copia.iml" filepath="$PROJECT_DIR$/.idea/PROGRA SERVER - copia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U1/Propiedades del Sistema/Propiedades del Sistema.iml" filepath="$PROJECT_DIR$/U1/Propiedades del Sistema/Propiedades del Sistema.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U1/Prueba/Prueba.iml" filepath="$PROJECT_DIR$/U1/Prueba/Prueba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U1/Vocales/Vocales.iml" filepath="$PROJECT_DIR$/U1/Vocales/Vocales.iml" />
+    </modules>
+  </component>
+</project>
