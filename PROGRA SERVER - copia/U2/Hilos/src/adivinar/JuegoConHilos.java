@@ -20,5 +20,16 @@ public class JuegoConHilos {
         t5.start();
         t6.start();
 
+        try {
+            t1.join();
+            t2.join();
+            t3.join();
+            t4.join();
+            t5.join();
+            t6.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
