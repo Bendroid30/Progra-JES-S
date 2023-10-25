@@ -1,4 +1,8 @@
 package cronómetro;
 
-public class Hilo {
+public class Hilo implements Runnable{
+    @Override
+    public void run() {
+
+    }
 }
