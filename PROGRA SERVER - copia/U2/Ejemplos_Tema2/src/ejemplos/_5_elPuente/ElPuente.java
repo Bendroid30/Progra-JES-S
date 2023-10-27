@@ -1,7 +1,5 @@
 package ejemplos._5_elPuente;
 
-import pspT2.ejemplos._5_elPuente.Persona;
-import pspT2.ejemplos._5_elPuente.Puente;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -15,7 +13,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class ElPuente {
 
 	public static void main(String[] args) {
-		pspT2.ejemplos._5_elPuente.Puente elPuente=new Puente();
+		Puente elPuente=new Puente();
 		
 		int tMinNuevaPersona=1;
 		int tMaxNuevaPersona=5;

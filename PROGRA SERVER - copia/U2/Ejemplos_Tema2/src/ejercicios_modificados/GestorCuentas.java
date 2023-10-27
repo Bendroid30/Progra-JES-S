@@ -1,10 +1,10 @@
-package ejemplos._3_CuentasBancarias;
+package ejercicios_modificados;
 
 public class GestorCuentas {
 
 	public static boolean transferencia(Cuenta c1, Cuenta c2, int cantidad) {
 		Cuenta cmayor,cmenor;
-		if (c1.getNumCuenta().compareTo(c2.getNumCuenta())<0) {
+		if (c1.getIdentificador().get()< c2.getIdentificador().get()) {
 			cmayor=c2;
 			cmenor=c1;
 		}
@@ -27,8 +27,8 @@ public class GestorCuentas {
 
 	public static boolean transferenciaBloqueo(Cuenta c1, Cuenta c2, int cantidad) {
 		boolean resultado=false;
-		synchronized (c1) {
-			synchronized (c2) {
+		synchronized (c1.getIdentificador()) {
+			synchronized (c2.getIdentificador()) {
 				if (c1.getSaldo()>=cantidad) {
 					c1.sacar(cantidad);
 					c2.ingresar(cantidad);

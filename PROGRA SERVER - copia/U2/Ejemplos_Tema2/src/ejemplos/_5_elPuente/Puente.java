@@ -1,7 +1,5 @@
 package ejemplos._5_elPuente;
 
-import pspT2.ejemplos._5_elPuente.Persona;
-
 /**
  * Clase para el control de los requisitos
  * 

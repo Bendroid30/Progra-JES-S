@@ -1,7 +1,5 @@
 package ejemplos._5_elPuente;
 
-import pspT2.ejemplos._5_elPuente.Puente;
-
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -15,7 +13,7 @@ public class Persona implements Runnable{
 	private final String idPersona;
 	private final int peso;
 	private final int tMinPaso,tMaxPaso;
-	private final pspT2.ejemplos._5_elPuente.Puente puente;
+	private final Puente puente;
 	
 	Persona(Puente puente, int peso, int tMinPaso, int tMaxPaso, String idP){
 		this.peso=peso;
