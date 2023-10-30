@@ -15,8 +15,8 @@ public class Hilo implements Runnable{
 	public void run() {
 		int dinero=10;
 		int numeroTransferencias=0;
-		for (int i=0;i<100;i++) {
-			if (GestorCuentas.transferenciaBloqueo(c1, c2, dinero)) {
+		for (int i=0;i<10000;i++) {
+			if (GestorCuentas.transferencia(c1, c2, dinero)) {
 				numeroTransferencias++;
 			}
 		}

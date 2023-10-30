@@ -6,7 +6,7 @@ public class Cuenta {
 
 	int saldo;
 	final String numCuenta;
-	private static int codigo=0;
+	private static int codigo;
 	private final AtomicInteger identificador=new AtomicInteger(codigo);
 
 
@@ -14,7 +14,7 @@ public class Cuenta {
 	public Cuenta(String numCuenta, int saldoInicial) {
 		this.numCuenta=numCuenta;
 		this.saldo=saldoInicial;
-		this.codigo=identificador.addAndGet(1);
+		this.codigo=identificador.incrementAndGet();
 	}
 	
 	public synchronized int getSaldo() {
