@@ -1,4 +1,6 @@
-package ejercicios_modificados;
+package ejercicios_modificados.cuenta;
+
+import ejercicios_modificados.cuenta.Cuenta;
 
 public class GestorCuentas {
 

@@ -1,4 +1,7 @@
-package ejercicios_modificados;
+package ejercicios_modificados.cuenta;
+
+import ejercicios_modificados.cuenta.Cuenta;
+import ejercicios_modificados.cuenta.GestorCuentas;
 
 public class Hilo implements Runnable{
 
